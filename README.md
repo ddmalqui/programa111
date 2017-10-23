@@ -9,6 +9,7 @@
 <li> CREO DIRECTORIO: Creo un directorio en mi PC donde quiera iniciar un repositorio Git </li>
 <li> CONSOLA GIT: En la consola instalada anteriormente (git CMD) me posiciono en la carpeta creada</li>
 <li> INICIO GIT: Ejecuto <code> git init </code>  </li>
+<li> CLONO (traigo los archivos del servidor):  git clone https://github.com/ddmalqui/programa111.git
 <li> MODIFICO: Modifico los archivos existentes o agrego nuevos</li>
 <li> NUEVOS ARCHIVOS: Si agregue archivos: <code> git add filename </code> o  <code> git add . </code>   </li>
 <li> COMMIT: <code> git commit -m "Commit message" </code> </li>
