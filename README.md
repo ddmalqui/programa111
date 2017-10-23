@@ -12,6 +12,7 @@
 <li> CLONO (traigo los archivos del servidor):  git clone https://github.com/ddmalqui/programa111.git
 <li> MODIFICO: Modifico los archivos existentes o agrego nuevos</li>
 <li> NUEVOS ARCHIVOS: Si agregue archivos: <code> git add filename </code> o  <code> git add . </code>   </li>
+<li> SI O SI UN ADD .: Si es el primer commit si o si ejecutamos <code> git add . </code>   </li>
 <li> COMMIT: <code> git commit -m "Commit message" </code> </li>
 <li> SUBIDA: <code> git push origin master </code> </li>
 </ol>
