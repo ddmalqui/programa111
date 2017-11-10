@@ -24,8 +24,11 @@ public class Juego01 {
         //no estoy usando la clase posicion para hacerlo mas rapido
         
         GraphNave nave01 = new GraphNave((float)50,(float)5,(float)20,(float)50,Color.green); 
+        GraphNave nave02 = new GraphNave((float)150,(float)10,(float)30,(float)50,Color.red); 
         
         ArrgloDeObjetos.add(nave01);
+        ArrgloDeObjetos.add(nave02);
+        
         Figuras figurasJuego = new Figuras(ArrgloDeObjetos);
        
        juego.add(figurasJuego);
