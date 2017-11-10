@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 package juego01;
-import java.awt.Color;
+import java.awt.*;
 import java.util.ArrayList;
-import ventanas.Figuras;
 import ventanas.*;
 
 /**
@@ -23,7 +22,8 @@ public class Juego01 {
         ArrayList ArrgloDeObjetos = new ArrayList();
         Posicion pos = new Posicion(50,0);
         //no estoy usando la clase posicion para hacerlo mas rapido
-        GraphNave nave01 = new GraphNave((float)250,(float)250,(float)20,(float)20,Color.WHITE); 
+        
+        GraphNave nave01 = new GraphNave((float)50,(float)5,(float)20,(float)50,Color.green); 
         
         ArrgloDeObjetos.add(nave01);
         Figuras figurasJuego = new Figuras(ArrgloDeObjetos);

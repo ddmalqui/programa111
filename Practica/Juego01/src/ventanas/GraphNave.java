@@ -22,8 +22,9 @@ public class GraphNave extends Naves implements Dibujo{
     
     @Override
     public void Dibujar(Graphics g) {
-        g.setColor(color);
+        g.setColor(this.color);
         g.fillRect((int)this.getX(), (int)this.getY(), (int)this.getAncho(), (int)this.getAlto());
+       
     }
     
     
