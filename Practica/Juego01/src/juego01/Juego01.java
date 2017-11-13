@@ -18,10 +18,13 @@ public class Juego01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Ventana juego = new Ventana("Juego 01");
+        Ventana juego = new Ventana("Juego 01",Color.BLACK);
         ArrayList ArrgloDeObjetos = new ArrayList();
         Posicion pos = new Posicion(250,250);
         //no estoy usando la clase posicion para hacerlo mas rapido
+        
+        GraphNave[] nave = new GraphNave[4];
+        nave[0] = new GraphNave((float)250,(float)5,(float)20,(float)50,Color.blue);
         
         GraphNave nave01 = new GraphNave((float)50,(float)5,(float)20,(float)50,Color.green); 
         GraphNave nave02 = new GraphNave((float)150,(float)10,(float)30,(float)50,Color.red);

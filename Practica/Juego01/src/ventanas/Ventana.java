@@ -16,9 +16,12 @@ import javax.swing.JFrame;
  */
 public class Ventana extends JFrame implements WindowListener{
 
-    public Ventana(String title){
-    super(title);
-    setBackground(Color.black);// TODO: NO FUNCA
+    public Ventana(String title, Color color){
+    //super(title);
+    super();
+    setTitle("hola");
+    
+    setBackground(color);// TODO: NO FUNCA
     setSize(500,500);
      
     addWindowListener(this);
