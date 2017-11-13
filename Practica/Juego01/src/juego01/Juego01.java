@@ -20,14 +20,18 @@ public class Juego01 {
     public static void main(String[] args) {
         Ventana juego = new Ventana("Juego 01");
         ArrayList ArrgloDeObjetos = new ArrayList();
-        Posicion pos = new Posicion(50,0);
+        Posicion pos = new Posicion(250,250);
         //no estoy usando la clase posicion para hacerlo mas rapido
         
         GraphNave nave01 = new GraphNave((float)50,(float)5,(float)20,(float)50,Color.green); 
-        GraphNave nave02 = new GraphNave((float)150,(float)10,(float)30,(float)50,Color.red); 
+        GraphNave nave02 = new GraphNave((float)150,(float)10,(float)30,(float)50,Color.red);
+        
+        GraphBala bala = new GraphBala(pos,20,Color.red);
+        
         
         ArrgloDeObjetos.add(nave01);
         ArrgloDeObjetos.add(nave02);
+        ArrgloDeObjetos.add(bala);
         
         Figuras figurasJuego = new Figuras(ArrgloDeObjetos);
        
