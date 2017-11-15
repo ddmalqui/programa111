@@ -4,19 +4,19 @@
  * and open the template in the editor.
  */
 package ventanas;
-
 import java.awt.Color;
 import java.awt.Graphics;
-
 /**
  *
  * @author Diego
  */
-public class GraphNave extends Naves implements Dibujo{
-    Color color;
+
+public class GraphTanque extends Tanque implements Dibujo {
+   
+     Color color;
     
-    public GraphNave(float posx, float posy, float tamx, float tamy, Color naveColor){
-        super(posx,posy,tamx,tamy);
+    public GraphTanque(Posicion pos, float tamx, float tamy, Color naveColor){
+        super(pos,tamx,tamy);
         this.color = naveColor;
     }
     
@@ -24,8 +24,8 @@ public class GraphNave extends Naves implements Dibujo{
     public void Dibujar(Graphics g) {
         g.setColor(this.color);
         g.fillRect((int)this.getX(), (int)this.getY(), (int)this.getAncho(), (int)this.getAlto());
-       
+        g.drawRect((int)this.getX() + (int)this.getAncho()/4, (int)this.getY()-30,(int)this.getAncho()/2, (int)this.getAlto());
     }
-    
+
     
 }

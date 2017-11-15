@@ -20,26 +20,53 @@ public class Juego01 {
     public static void main(String[] args) {
         Ventana juego = new Ventana("Juego 01",Color.BLACK);
         ArrayList ArrgloDeObjetos = new ArrayList();
-        Posicion pos = new Posicion(250,250);
         //no estoy usando la clase posicion para hacerlo mas rapido
         
-        GraphNave[] nave = new GraphNave[4];
-        nave[0] = new GraphNave((float)250,(float)5,(float)20,(float)50,Color.blue);
+        GraphNave[] nave = new GraphNave[500];
+        float ancho = 20;
+        float alto = 20;
+        juego.setSize(700,700);
+        int cantNaves = juego.getWidth()/50;
+        int ultimai = 0;
+        int ultimai2 = 0;
         
-        GraphNave nave01 = new GraphNave((float)50,(float)5,(float)20,(float)50,Color.green); 
-        GraphNave nave02 = new GraphNave((float)150,(float)10,(float)30,(float)50,Color.red);
+        Color[] colors = new Color[3];
+        //Initialize the values of the array
+        colors[0] = Color.red;
+        colors[1] = Color.yellow;
+        colors[2] = Color.green; 
         
+        for(int i = 0; i <= cantNaves-1; i++){
+        nave[i] = new GraphNave((float)(50*i)+ancho/2,(float)10,ancho,alto,colors[i % 3]);
+        ArrgloDeObjetos.add(nave[i]);
+        ultimai = i;
+        System.out.print(i + "--");
+        }
+        
+        for(int i = 0; i <= (cantNaves-2); i++){
+        nave[i + ultimai + 1] = new GraphNave((float)(50*i)+(ancho/2) + 25,(float)40,ancho,alto,colors[i % 3]);
+        ArrgloDeObjetos.add(nave[i + ultimai + 1]);
+        ultimai2 = i + ultimai + 1;
+        }
+        
+        for(int i = 0; i <= (cantNaves-3); i++){
+        nave[i + ultimai2 + 1] = new GraphNave((float)(50*i)+(ancho/2) + 50,(float)70,ancho,alto,colors[i % 3]);
+        ArrgloDeObjetos.add(nave[i + ultimai2 + 1]);
+        ultimai2 = i + ultimai + 1;
+        }
+        
+        Posicion pos = new Posicion(535,240);
         GraphBala bala = new GraphBala(pos,20,Color.red);
-        
-        
-        ArrgloDeObjetos.add(nave01);
-        ArrgloDeObjetos.add(nave02);
         ArrgloDeObjetos.add(bala);
+        
+        Posicion posTanque = new Posicion(500,250);
+        GraphTanque tanque = new GraphTanque(posTanque,80,40,Color.PINK);
+        ArrgloDeObjetos.add(tanque);
+        
         
         Figuras figurasJuego = new Figuras(ArrgloDeObjetos);
        
        juego.add(figurasJuego);
-       juego.setSize(700,400);
        juego.setVisible(true);
         
     }
