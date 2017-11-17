@@ -55,12 +55,12 @@ public class Juego01 {
         ultimai2 = i + ultimai + 1;
         }
         
-        Posicion pos = new Posicion(535,240);
+        Posicion pos = new Posicion(530,juego.getHeight()-175);
         GraphBala bala = new GraphBala(pos,20,Color.red);
         ArrgloDeObjetos.add(bala);
         
-        Posicion posTanque = new Posicion(500,250);
-        GraphTanque tanque = new GraphTanque(posTanque,80,40,Color.PINK);
+        Posicion posTanque = new Posicion(500,juego.getHeight()-150);
+        GraphTanque tanque = new GraphTanque(posTanque,80,40,colors);
         ArrgloDeObjetos.add(tanque);
         
         

@@ -20,6 +20,10 @@ public class Tanque extends Posicion {
         this.alto = alto;
     }
      
+    public void mover(int y){
+        
+    }
+     
     public float getAncho(){
         return this.ancho;
     }
