@@ -21,12 +21,15 @@ public class Figuras extends JPanel{
         this.v = objADibujar;
     }
     
+    @Override
     public void paint(Graphics g){
         Dibujo dibujo;
-        
         for (int i=0;i<v.size();i++){
         dibujo = (Dibujo)v.get(i); // No es necesesario castiarlo, pero lo pide sno da error. O sea hay que pasarlo a tipo Dibujo
         dibujo.Dibujar(g);
             }
+    
+        
+    
     }
 }

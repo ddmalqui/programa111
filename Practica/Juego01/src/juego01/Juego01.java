@@ -63,11 +63,10 @@ public class Juego01 {
         GraphTanque tanque = new GraphTanque(posTanque,80,40,colors);
         ArrgloDeObjetos.add(tanque);
         
-        
         Figuras figurasJuego = new Figuras(ArrgloDeObjetos);
        
-       juego.add(figurasJuego);
-       juego.setVisible(true);
+        juego.add(figurasJuego);
+        juego.setVisible(true);
         
     }
     
