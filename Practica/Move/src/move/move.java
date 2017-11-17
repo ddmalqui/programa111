@@ -5,13 +5,9 @@ import java.awt.event.*;
 
 
 public class move extends Frame implements KeyListener,WindowListener, MouseMotionListener {
-
-	 /**
-	 * 
-	 */
+    
 	int x=40,y=30;
 	
-
 	public move(){
 		 addKeyListener(this); 
 		 addMouseMotionListener(this);
@@ -30,7 +26,7 @@ public class move extends Frame implements KeyListener,WindowListener, MouseMoti
 			
 			switch(keycode){
 			case KeyEvent.VK_LEFT:
-				System.out.print("tecla");
+				System.out.print(x);
 				x = x - 1;
 				repaint();
 				break;	
