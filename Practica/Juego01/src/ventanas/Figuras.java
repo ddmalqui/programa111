@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package ventanas;
-import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 import java.awt.*;
 import javax.swing.JPanel;
 import java.util.ArrayList;
@@ -26,6 +25,7 @@ public class Figuras extends JPanel implements KeyListener{
     Tanque tanque;
     int x = 0;
     int y = 0;
+    int it = 0;
     
     public Figuras(ArrayList objADibujar){
         this.v = objADibujar;
@@ -34,20 +34,25 @@ public class Figuras extends JPanel implements KeyListener{
      //   setFocusableTransversalKeyEnabled(true);
     }
     
-    public void repintar(Graphics g,ArrayList objADibujar){
-        this.v = objADibujar;
-        repaint();
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+      //System.out.print("paint  --  \n");
+        Dibujo dibujo;
+        for (int i=0;i<v.size();i++){
+        dibujo = (Dibujo)v.get(i); // No es necesesario castiarlo, pero lo pide sno da error. O sea hay que pasarlo a tipo Dibujo
+        dibujo.Dibujar(g);
+        }
     }
     
-    @Override
-    public void paint(Graphics g){
-        System.out.print("en paint de Jpanel  --  ");
+   // @Override
+   /* public void paint(Graphics g){
+        //System.out.print("paint  --  \n");
         Dibujo dibujo;
         for (int i=0;i<v.size();i++){
         dibujo = (Dibujo)v.get(i); // No es necesesario castiarlo, pero lo pide sno da error. O sea hay que pasarlo a tipo Dibujo
         dibujo.Dibujar(g);
             }
-    }
+    }*/
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -58,11 +63,15 @@ public class Figuras extends JPanel implements KeyListener{
         int keycode = e.getKeyCode();
 			switch(keycode){
 			case KeyEvent.VK_LEFT:
-				System.out.print(x);
-				x = x + 1;
-                                tanque.setX(x);
+				System.out.print(it+"\n");
+                tanque.setX(tanque.getX() - 10);
 				repaint();
 				break;	
+    		case KeyEvent.VK_RIGHT:
+    				System.out.print(it+"\n");
+    				tanque.setX(tanque.getX() + 10);
+    				repaint();
+    				break;	
 			}   
     }
 
@@ -72,6 +81,8 @@ public class Figuras extends JPanel implements KeyListener{
 
     public void setiTanque(int iTanque) {
        tanque = (Tanque) v.get(iTanque - 1);
+       //v.remove(iTanque - 1);
+       it = iTanque - 1;
     }
     
     
