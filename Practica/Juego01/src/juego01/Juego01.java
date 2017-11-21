@@ -30,11 +30,11 @@ public class Juego01 {
         int ultimai = 0;
         int ultimai2 = 0;
         
-        Color[] colors = new Color[3];
-        //Initialize the values of the array
-        colors[0] = Color.red;
-        colors[1] = Color.yellow;
-        colors[2] = Color.green; 
+            Color[] colors = new Color[3];
+            //Initialize the values of the array
+            colors[0] = Color.red;
+            colors[1] = Color.yellow;
+            colors[2] = Color.green; 
         
         for(int i = 0; i <= cantNaves-1; i++){
         nave[i] = new GraphNave((float)(50*i)+ancho/2,(float)10,ancho,alto,colors[i % 3]);
