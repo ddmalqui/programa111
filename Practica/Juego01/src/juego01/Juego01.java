@@ -62,9 +62,11 @@ public class Juego01 {
         Posicion posTanque = new Posicion(500,juego.getHeight()-150);
         GraphTanque tanque = new GraphTanque(posTanque,80,40,colors);
         ArrgloDeObjetos.add(tanque);
+        int iTanque = (ArrgloDeObjetos.size());
         
         
         Figuras figurasJuego = new Figuras(ArrgloDeObjetos);
+        figurasJuego.setiTanque(iTanque);
        
        juego.add(figurasJuego);
        juego.setVisible(true);
