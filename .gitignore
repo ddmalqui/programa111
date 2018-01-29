@@ -17,6 +17,7 @@
 /Practica/OO01/build/
 /Practica/OO02_/nbproject/private/
 /Practica/OO02/nbproject/private/
+<<<<<<< HEAD
 /Practica/OO02/build/
 /Practica/BallAnimation/nbproject/private/
 /Practica/BallAnimation/build/
@@ -28,3 +29,6 @@
 /Practica/Infracciones/nbproject/private/
 /Practica/CineCecla/nbproject/private/
 /Practica/CineCecla/build/
+=======
+/Practica/OO02/build/
+>>>>>>> a3be0fdc0e96b492a452aecde0e65f47f84a38aa
