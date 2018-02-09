@@ -3,7 +3,7 @@ package oo02;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Circulo {
+public class Circulo  {
 
 	private int x;
 	private int y;
